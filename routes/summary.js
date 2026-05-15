@@ -16,10 +16,10 @@ You are an AI assistant that summarizes meeting transcripts.
 
 From the following transcript, extract and summarize the key points discussed in the meeting. Include:
 
-1. 📌 Main topics covered  
-2. ✅ Important decisions made  
-3. 🔄 Suggestions or ideas discussed  
-4. 📅 Any agreed follow-ups or deadlines (if any)
+1.  Main topics covered  
+2.  Important decisions made  
+3. Suggestions or ideas discussed  
+4. Any agreed follow-ups or deadlines (if any)
 
 Provide your output in clear bullet points or short paragraphs.
 
@@ -30,7 +30,7 @@ ${paragraph}
     });
 
     const summary = response.data.response;
-    console.log("🧠 Llama Summary:", summary);
+    console.log(" Llama Summary:", summary);
 
     await Video.findOneAndUpdate(
       { email, filename },
@@ -41,7 +41,7 @@ ${paragraph}
     res.json({ summary });
 
   } catch (err) {
-    console.error("❌ Summary error:", err.message);
+    console.error(" Summary error:", err.message);
     res.status(500).json({ error: 'Failed to summarize' });
   }
 });
